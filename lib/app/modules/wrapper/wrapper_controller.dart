@@ -13,6 +13,15 @@ class WrapperController extends GetxController {
         duration: Duration(milliseconds: 300), curve: Curves.ease);
   }
 
+  final isDark = false.obs;
+
+  changeToDarkTheme() {
+    isDark.value = !isDark.value;
+    Get.changeTheme(
+      isDark.value ? ThemeData.dark() : ThemeData.light(),
+    );
+  }
+
   @override
   void onInit() {
     log("WrapperController onInit");

@@ -17,8 +17,30 @@ class _WrapperViewState extends State<WrapperView> {
   Widget build(BuildContext context) {
     return GetX<WrapperController>(builder: (_) {
       return Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                title: const Text("Kasir"),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text("Catatan"),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           title: Text("MyCatat"),
+          actions: [
+            IconButton(
+              onPressed: () {
+                _.changeToDarkTheme();
+              },
+              icon: Icon(!_.isDark.value ? Icons.dark_mode : Icons.light_mode),
+            ),
+          ],
         ),
         body: PageView(
           controller: _.pageController,
