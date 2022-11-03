@@ -32,7 +32,7 @@ class _WrapperViewState extends State<WrapperView> {
           ),
         ),
         appBar: AppBar(
-          title: Text("MyCatat"),
+          title: const Text("MyCatat"),
           actions: [
             IconButton(
               onPressed: () {
@@ -45,7 +45,7 @@ class _WrapperViewState extends State<WrapperView> {
         body: PageView(
           controller: _.pageController,
           onPageChanged: _.onChangePage,
-          children: [
+          children: const [
             CashierView(),
             NoteView(),
           ],
@@ -53,7 +53,7 @@ class _WrapperViewState extends State<WrapperView> {
         bottomNavigationBar: NavigationBar(
           selectedIndex: _.indexSelected.value,
           onDestinationSelected: _.onChangePage,
-          destinations: [
+          destinations: const [
             NavigationDestination(
               icon: Icon(Icons.home_filled),
               label: "Kasir",

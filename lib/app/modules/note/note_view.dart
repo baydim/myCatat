@@ -10,7 +10,7 @@ class NoteView extends StatefulWidget {
 class _NoteViewState extends State<NoteView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
           'NoteView is working',

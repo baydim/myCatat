@@ -17,13 +17,13 @@ class _WidgetListDataCashierState extends State<WidgetListDataCashier> {
     return Column(
       children: [
         ListTile(
-          title: Text("Pilih Produk"),
-          trailing: Icon(Icons.add),
+          title: const Text("Pilih Produk"),
+          trailing: const Icon(Icons.add),
           onTap: () {
             showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return Container(
+                  return SizedBox(
                     height: 300,
                     child: ListView.builder(
                       itemCount: widget.dataSelectedUser.length,

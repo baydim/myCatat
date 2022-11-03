@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   funNextToWrapperView() {
     Future.delayed(const Duration(seconds: 1), () {
       Get.offAll(
-        () => WrapperView(),
+        () => const WrapperView(),
         binding: WrapperBinding(),
       );
     });

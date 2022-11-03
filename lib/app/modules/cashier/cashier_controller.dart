@@ -13,7 +13,7 @@ class CashierController extends GetxController {
 
   funAddDataCashier(ModelListKasir data) async {
     log('funAddDataCashier');
-    dataCashier.value.add(data);
+    dataCashier.add(data);
     if (dataCashier.isNotEmpty) {
       dataCashier.value = (await db.saveDataListCashier(data: dataCashier))!;
     } else {
@@ -24,7 +24,7 @@ class CashierController extends GetxController {
   funDeleteItemCashier(int index) async {
     log('funDeleteItemCashier');
     dataCashier.value = (await db.getDataListCashier())!;
-    if (dataCashier.value.isNotEmpty) {
+    if (dataCashier.isNotEmpty) {
       dataCashier.removeAt(index);
       await db.saveDataListCashier(data: dataCashier);
     }
@@ -34,7 +34,7 @@ class CashierController extends GetxController {
     log('funEditItemCashier');
     dataCashier.value = (await db.getDataListCashier())!;
     if (dataCashier.isEmpty) {
-      dataCashier.value[index] = data;
+      dataCashier[index] = data;
       await db.saveDataListCashier(data: dataCashier);
     }
   }

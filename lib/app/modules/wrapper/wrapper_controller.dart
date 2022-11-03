@@ -10,7 +10,7 @@ class WrapperController extends GetxController {
   onChangePage(int index) {
     indexSelected.value = index;
     pageController.animateToPage(index,
-        duration: Duration(milliseconds: 300), curve: Curves.ease);
+        duration: const Duration(milliseconds: 300), curve: Curves.ease);
   }
 
   final isDark = false.obs;
