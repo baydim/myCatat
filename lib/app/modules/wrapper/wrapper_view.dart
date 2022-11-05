@@ -33,14 +33,14 @@ class _WrapperViewState extends State<WrapperView> {
         ),
         appBar: AppBar(
           title: const Text("MyCatat"),
-          actions: [
-            IconButton(
-              onPressed: () {
-                _.changeToDarkTheme();
-              },
-              icon: Icon(!_.isDark.value ? Icons.dark_mode : Icons.light_mode),
-            ),
-          ],
+          // actions: [
+          //   IconButton(
+          //     onPressed: () {
+          //       // _.changeToDarkTheme();
+          //     },
+          //     icon: Icon(!_.isDark.value ? Icons.dark_mode : Icons.light_mode),
+          //   ),
+          // ],
         ),
         body: PageView(
           controller: _.pageController,

@@ -21,14 +21,23 @@ class _CashierViewState extends State<CashierView> {
       builder: (_) {
         return Scaffold(
           body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  WidgetListDataCashier(
-                    dataSelectedUser: _.dataCashier.value,
-                  )
-                ],
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      constraints: const BoxConstraints(
+                        maxWidth: 1000,
+                      ),
+                      child: WidgetListDataCashier(
+                        dataSelectedUser: _.dataCashier.value,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
